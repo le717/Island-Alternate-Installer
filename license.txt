@@ -1,0 +1,36 @@
+LEGO SOFTWARE LICENSE AGREEMENT AND WARRANTY DISCLAIMER
+License for the Software included on the LEGO SOFTWARE Product (hereinafter referred to as the Software) from the LEGO Group.
+IMPORTANT -- READ CAREFULLY: By clicking on the "Yes" button you agree to be and are hereby bound by the terms of this License Agreement. If you do not agree to the terms of this Agreement, you must promptly return the LEGO SOFTWARE product, including accompanying documentation (hereinafter referred to as the Documentation). Upon such return your payment will be refunded. 
+I. GRANT OF LICENSE: 
+The LEGO Group and its suppliers and licensors (hereinafter referred to as LEGO) hereby grant you a non-exclusive license to use the Software and Documentation subject to the following terms: 
+You may:
+(i) use the Software in one local area network; 
+(ii) copy the Software for back-up, archival purposes provided any copy must contain all of the original Software's proprietary notices. 
+You may not:
+(i) permit other individuals to use the Software except under the terms listed above; 
+(ii) modify, translate, reverse engineer, decompile, disassemble (except to the extent that this restriction is expressly prohibited by law) or create derivative works based upon the Software or Documentation; 
+(iii) copy the Software or Documentation (except for back-up purposes); 
+(iv) resell, rent, lease, transfer, or otherwise transfer rights to the Software or Documentation; or 
+(v) remove any proprietary notices or labels on the Software or Documentation. 
+The Software includes certain plug-in components, hereinafter referred to as the Plug-ins). You may install and use the Plug-Ins solely as part of, and in conjunction with the LEGO SOFTWARE Product. You may not use the Plug-Ins in any other manner, unless you have a separate license to do so.
+II.  SOFTWARE: 
+If you receive the first copy of the Software electronically and a second copy on media the second copy may be used for archival purposes only and may not be transferred to or used by any other person.  This license does not grant you any right to any enhancement or update. 
+III. TITLE: 
+Title, ownership, rights, and intellectual property rights in and to the Software and Documentation shall remain with the LEGO Group. The Software is protected by national copyright laws and international copyright treaties. 
+Title, ownership rights and intellectual property rights in and to the content accessed through the Software including any content contained in the Software media demonstration files is the property of the applicable content owner and may be protected by applicable copyright or other law. This license gives you no rights to such content. 
+LEGO, the LEGO logo, the LEGO Brick and LEGO SOFTWARE are some of the trademarks belonging exclusively to the LEGO Group.
+If you want to learn more about how to use trademarks and other proprietary rights belonging to the LEGO Group please visit our web site:http://www.lego.com. 
+IV. DISCLAIMER OF WARRANTY: 
+THE SOFTWARE AND DOCUMENTATION ARE PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND.  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LEGO GROUP FURTHER DISCLAIMS ALL WARRANTIES, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF THE SOFTWARE AND DOCUMENTATION REMAINS WITH YOU. 
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE LEGO GROUP OR ITS SUPPLIERS BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, DIRECT, INDIRECT, SPECIAL, PUNITIVE, OR OTHER DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR OTHER PECUNIARY LOSS) ARISING OUT OF THIS AGREEMENT OR THE USE OF OR INABILITY TO USE THE PRODUCT, EVEN IF THE LEGO GROUP HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. BECAUSE SOME STATES/JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE ABOVE LIMITATION MAY NOT APPLY TO YOU.
+V. TERMINATION: 
+This license shall terminate automatically if you fail to comply with the limitations described in this Agreement.  No notice shall be required from the LEGO Group to effectuate such termination.  On termination you must destroy all copies of the Software and Documentation.
+VI. GOVERNING LAW: 
+This License Agreement shall be governed by the laws of the jurisdiction, where you have bought the LEGO SOFTWARE product. However, if the product is bought in USA the License Agreement shall be governed by the laws of the State of Connecticut, without regard to conflicts of law provisions, and if the product is bought in USA you consent to the exclusive jurisdiction of the state and federal courts sitting in the State of Connecticut. This License Agreement will not be governed by the United Nations Convention of Contracts for the International Sale of Goods, the application of which is hereby expressly excluded.
+VII. ENTIRE AGREEMENT: 
+This Agreement constitutes the complete and exclusive agreement between the LEGO Group and you with respect to the subject matter hereof and supersedes all prior oral or written understandings, communications or agreements not specifically incorporated herein.  This Agreement may not be modified except in writing duly signed by an authorised representative of the LEGO Group and you.
+
+
+
+
+
