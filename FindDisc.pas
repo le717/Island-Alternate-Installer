@@ -1,12 +1,9 @@
-//  Click-And-Go LEGO Island Alternate Installer
-//  Copyright (c) 2012 le717
-//  http://triangle717.wordpress.com
+//  LEGO Island Alternate Installer
+//  Created 2012-2014 Triangle717
+//  <http://triangle717.wordpress.com/>
 //  Contains source code from Grim Fandango Setup
 //  Copyright (c) 2007-2008 Bgbennyboy
-//  Http://quick.mixnmojo.com
-//  And http://www.vincenzo.net/isxkb/index.php?title=Ask_for_a_drive_to_install
-//  Code modified by Bgbennyboy to search for a unique file
-//  and by le717 to support both ANSI and Unicode Inno Setup
+//  <http://quick.mixnmojo.com/>
 
 [Code]
 
@@ -20,7 +17,7 @@ var
 	external 'GetLogicalDriveStringsA@kernel32.dll stdcall';
 
 const
-	UniqueFile = 'DATA\disk\LEGOISLE.exe'; // Eh, I could do just ISLE.EXE, but LEGOISLE.EXE makes it more unique.  -le717
+	UniqueFile = 'DATA\disk\LEGOISLE.exe';
 
 	DRIVE_UNKNOWN = 0; // The drive type cannot be determined.
 	DRIVE_NO_ROOT_DIR = 1; // The root path is invalid. For example, no volume is mounted at the path.
@@ -109,7 +106,8 @@ begin
 	FindAllCdDrives();
 	if GetArrayLength(DrvLetters) < 1 then
 	begin
-		MsgBox('Whoops! I cannot find any disc drives attached to your computer.', mbError, MB_OK);  // Play on the most famous non-glitch LEGO Island quote. :P
+    // Play on the most famous non-glitch LEGO Island quote. :P
+		MsgBox('Whoops! I cannot find any disc drives attached to your computer.', mbError, MB_OK);
 		Abort;
 	end;
 
@@ -122,7 +120,8 @@ begin
 	begin
 		while FindUniqueFile() = '' do
 		begin
-			if MsgBox('Whoops! You have to put the CD in your computer.', mbConfirmation, MB_OKCANCEL or MB_DEFBUTTON1) = IDOK then  //Oh, so true!
+      // Oh so true!
+			if MsgBox('Whoops! You have to put the CD in your computer.', mbConfirmation, MB_OKCANCEL or MB_DEFBUTTON1) = IDOK then
 
 			else
 				Abort;
