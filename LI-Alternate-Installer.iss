@@ -1,62 +1,73 @@
-;  Click-And-Go LEGO Island Alternate Installer
-;  Copyright � 2012 le717
-;  http://triangle717.wordpress.com
-;  Contains source code from Grim Fandango Setup
-;  Copyright (c) 2007-2008 Bgbennyboy
-;  Http://quick.mixnmojo.com
-;  Built with Inno Setup 5.5.2 Unicode
+﻿; LEGO Island Alternate Installer
+; Created 2012-2014 Triangle717
+; <http://Triangle717.WordPress.com/>
+; Contains source code from Grim Fandango Setup
+; Copyright (c) 2007-2008 Bgbennyboy
+; <http://quick.mixnmojo.com/>
 
-; If any version below the specified version is used for compiling, this error will be shown.
-#if VER < EncodeVer(5,5,2)
+; If any version below the specified version is used for compiling, 
+; this error will be shown.
+#if VER < EncodeVer(5, 5, 2)
   #error You must use Inno Setup 5.5.2 or newer to compile this script
 #endif
 
-[Define]
-#define MyAppInstallerName "Click-And-Go LEGO Island Alternate Installer V1.0"
-#define MyAppName "LEGO Island"
+#define MyAppInstallerName "LEGO® Island Alternate Installer"
+#define MyAppInstallerVersion "1.1.0"
+#define MyAppName "LEGO® Island"
+#define MyAppNameNoR "LEGO Island"
 #define MyAppVersion "1.1.0.0"
 #define MyAppPublisher "LEGO"
 #define MyAppExeName "LEGOISLE.EXE"
+
 [Setup]
-AppID={
+AppID={#MyAppName}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
+VersionInfoVersion={#MyAppInstallerVersion}
 AppPublisher={#MyAppPublisher}
-AppCopyright=� 1997 {#MyAppPublisher}
-VersionInfoVersion={#MyAppVersion}
+AppCopyright=© 1997 {#MyAppPublisher}
 LicenseFile=license.txt
-DefaultDirName={pf}\{#MyAppName}
-DefaultGroupName={#MyAppName}
-AllowNoIcons=true
+; Start menu/screen and Desktop shortcuts
+DefaultDirName={pf}\{#MyAppNameNoR}
+DefaultGroupName={#MyAppNameNoR}
+AllowNoIcons=yes
+; Installer Graphics
 SetupIconFile=ISLE.ico
-WizardImageFile=LI Sidebar Image.bmp
-WizardSmallImageFile=ISLE.bmp
+WizardImageFile=Sidebar.bmp
+WizardSmallImageFile=Small-Image.bmp
 WizardImageStretch=True
 WizardImageBackColor=clBlack
-OutputDir=Here Lie The EXE
-OutputBaseFilename={#MyAppInstallerName}
+; Location of the compiled Exe
+OutputDir=bin
+OutputBaseFilename={#MyAppNameNoR} Alternate Installer {#MyAppInstallerVersion}
+; Uninstallation stuff
 UninstallFilesDir={app}
-UninstallDisplayIcon={#MyAppExeName}
-CreateUninstallRegKey=true
+UninstallDisplayIcon=ISLE.ico
+CreateUninstallRegKey=yes
 UninstallDisplayName={#MyAppName}
+; Compression
+Compression=lzma2/ultra64
 SolidCompression=True
-Compression=lzma/ultra64
 InternalCompressLevel=ultra
+LZMAUseSeparateProcess=yes
+; From top to bottom:
+; Explicitly set Admin rights, no other languages, do not restart upon finish.
 PrivilegesRequired=admin
 ShowLanguageDialog=no
+RestartIfNeededByRun=no
 
 [Languages]
 Name: "English"; MessagesFile: "compiler:Default.isl"
 
 [Messages]
 English.BeveledLabel={#MyAppInstallerName}
-; English.WelcomeLabel2 is overridden because I'm unsure if every LEGO Island disc says version 1.1.0.0 or just mine.
+; WelcomeLabel2 is overridden because I'm unsure if every LEGO Island
+; disc says version 1.1.0.0 or just mine.
 English.WelcomeLabel2=This will install [name] on your computer.%n%nIt is recommended that you close all other applications before continuing.
-; English.DiskSpaceMBLabel is disabled because it would report an incorrect installation size.
+; DiskSpaceMBLabel is overridden because it reports an incorrect installation size.
 English.DiskSpaceMBLabel=
 
-; Both Types and Components sections are required to create the installation options.
-               
+; Both Types and Components sections are required to create the installation options.               
 [Types]
 Name: "Normal"; Description: "Normal Installation (Requires CD)"
 Name: "Full"; Description: "Full Installation (Does Not Require CD)"  
@@ -66,14 +77,21 @@ Name: "Normal"; Description: "Normal Installation (Requires CD)"; Types: Normal
 Name: "Full"; Description: "Full Installation (Does Not Require CD)"; Types: Full 
 
 [Files]
-Source: "ISLE.ico"; DestDir: "{app}"; Components: Full Normal
+; Manual, icon, license
+Source: "US Manual.pdf"; DestDir: "{app}"; Flags: ignoreversion skipifsourcedoesntexist
+Source: "ISLE.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "license.txt"; DestDir: "{app}"; Flags: ignoreversion
+
+; Standard files
 Source: "{code:GetSourceDrive}redist\directx\d3drm.dll"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}README.HLP"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}DATA\disk\*"; DestDir: "{app}"; Flags: external ignoreversion createallsubdirs recursesubdirs; Components: Normal
-Source: "{code:GetSourceDrive}MSREG\MSRUN32.EXE"; DestName: "Msrun.exe"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
+Source: "{code:GetSourceDrive}MSREG\MSRUN.EXE"; DestName: "Msrun.exe"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}MSREG\MSREG.INI"; DestName: "Msreg.ini"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}MSREG\MSREG32.DLL"; DestName: "Msreg32.dll"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
-; Because of the disc layout, the Full installation files have to be declared separately to insure everything is installed in the proper place.
+
+; Because of the disc layout, the Full installation files have to be declared
+; separately to ensure everything is installed in their proper location.
 Source: "{code:GetSourceDrive}DATA\disk\LEGOISLE.EXE"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full
 Source: "{code:GetSourceDrive}DATA\disk\ISLE.EXE"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full
 Source: "{code:GetSourceDrive}DATA\disk\CONFIG.EXE"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full
@@ -83,15 +101,23 @@ Source: "{code:GetSourceDrive}DATA\disk\MSVCRT.DLL"; DestDir: "{app}"; Flags: ex
 Source: "{code:GetSourceDrive}Lego\Scripts\*"; DestDir: "{app}\LEGO\Scripts"; Flags: external ignoreversion recursesubdirs createallsubdirs; Components: Full
 Source: "{code:GetSourceDrive}DATA\disk\LEGO\data\*"; DestDir: "{app}\LEGO\data"; Flags: external ignoreversion; Components: Full
 
+
 [Icons]
-Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\ISLE.ICO"
-Name: "{group}\To Configure {#MyAppName}"; Filename: "{app}\CONFIG.EXE"; IconFilename: "{app}\ISLE.ico"
-Name: "{group}\Print Free Map of LEGO Island"; Filename: "{app}\Msrun.exe"; IconFilename: "{app}\ISLE.ico"; Parameters: "LaunchRegistration"
-Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
-Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: desktopicon
+; Start menu/screen and Desktop icons
+Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\ISLE.ico";Comment: "Run {#MyAppName}"
+Name: "{group}\To Configure {#MyAppName}"; Filename: "{app}\CONFIG.EXE"; IconFilename: "{app}\ISLE.ico"; Comment: "Configure {#MyAppName}"
+Name: "{group}\Print Free Map of {#MyAppNameNoR}"; Filename: "{app}\Msrun.exe"; IconFilename: "{app}\ISLE.ico"; Comment: "Print A Free Map of {#MyAppNameNoR}"; Parameters: "LaunchRegistration"
+Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; IconFilename: "{app}\ISLE.ico";
+Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\ISLE.ico"; Comment: "Run {#MyAppName}"; Tasks: desktopicon
+
+[Tasks]
+; Create a desktop icon, run with administrator rights
+Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
+Name: "Admin"; Description: "Run {#MyAppName} with Administrator Rights"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Registry]
-; Registry strings are always hard-coded (No Define functions) to ensure everything works properly.
+; Registry strings are always hard-coded (!No ISPP functions!) 
+; to ensure everything works properly.
 Root: "HKLM"; Subkey: "SOFTWARE\Mindscape"; ValueType: none; Flags: uninsdeletekey
 Root: "HKLM"; Subkey: "SOFTWARE\Mindscape\LEGO Island"; ValueType: none; Flags: uninsdeletekey
 Root: "HKLM"; Subkey: "SOFTWARE\Mindscape\LEGO Island"; ValueType: string; ValueName: "3D Device Name"; Flags: uninsdeletevalue
@@ -111,20 +137,20 @@ Root: "HKLM"; Subkey: "SOFTWARE\Mindscape\LEGO Island"; ValueType: string; Value
 Root: "HKLM"; Subkey: "SOFTWARE\Mindscape\LEGO Island"; ValueType: string; ValueName: "UseJoystick"; ValueData: "NO"; Flags: uninsdeletevalue
 Root: "HKLM"; Subkey: "SOFTWARE\Mindscape\LEGO Island"; ValueType: string; ValueName: "Wide View Angle"; ValueData: "YES"; Flags: uninsdeletevalue
 Root: "HKLM"; Subkey: "SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\LEGOISLE.exe"; ValueType: string; ValueName: "(Default)"; ValueData: "{app}\LEGOISLE.EXE"; Flags: uninsdeletekey
+
+; Run with administrator rights if that option was selected
 Root: "HKCU"; Subkey: "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"; ValueType: string; ValueName: "{app}\LEGOISLE.EXE"; ValueData: "RUNASADMIN"; Flags: uninsdeletevalue; Tasks: Admin
 Root: "HKCU"; Subkey: "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"; ValueType: string; ValueName: "{app}\ISLE.EXE"; ValueData: "RUNASADMIN"; Flags: uninsdeletevalue; Tasks: Admin
 Root: "HKCU"; Subkey: "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"; ValueType: string; ValueName: "{app}\CONFIG.EXE"; ValueData: "RUNASADMIN"; Flags: uninsdeletevalue; Tasks: Admin
 Root: "HKCU"; Subkey: "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"; ValueType: string; ValueName: "{app}\Msrun.exe"; ValueData: "RUNASADMIN"; Flags: uninsdeletevalue; Tasks: Admin
 
-[Tasks]
-Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "Admin"; Description: "Run {#MyAppName} with Administrator Rights"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-
 [Code]
+// Pascal script from Bgbennyboy to pull files off a CD, greatly trimmed up 
+// and modified to support ANSI and Unicode Inno Setup by Triangle717.
 var
 	SourceDrive: string;
 
-#include "FindDisc.iss"
+#include "FindDisc.pas"
 
 function GetSourceDrive(Param: String): String;
 begin
