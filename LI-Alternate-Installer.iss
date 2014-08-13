@@ -45,6 +45,8 @@ UninstallFilesDir={app}
 UninstallDisplayIcon=ISLE.ico
 CreateUninstallRegKey=yes
 UninstallDisplayName={#MyAppName}
+; This is required so Inno can correctly report the installation size.
+UninstallDisplaySize=546308096
 ; Compression
 Compression=lzma2/ultra64
 SolidCompression=True
