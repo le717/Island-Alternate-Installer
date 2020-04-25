@@ -1,4 +1,4 @@
-﻿; LEGO Island Alternate Installer
+; LEGO Island Alternate Installer
 ; Created 2012-2014 Triangle717
 ; <http://Triangle717.WordPress.com/>
 ; Contains source code from Grim Fandango Setup
@@ -91,6 +91,9 @@ Source: "{code:GetSourceDrive}DATA\disk\*"; DestDir: "{app}"; Flags: external ig
 Source: "{code:GetSourceDrive}MSREG\MSRUN.EXE"; DestName: "Msrun.exe"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}MSREG\MSREG.INI"; DestName: "Msreg.ini"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}MSREG\MSREG32.DLL"; DestName: "Msreg32.dll"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
+Source: "{code:GetSourceDrive}DATA\disk\CMS16.DLL"; DestName: "CMS16.dll"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Normal
+Source: "{code:GetSourceDrive}DATA\disk\cms32_95.dll"; DestName: "cms32_95.dll"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Normal
+Source: "{code:GetSourceDrive}DATA\disk\CMS32_NT.dll"; DestName: "CMS32_NT.dll"; DestDir: "{app}"; Flags: external ignoreversion skipifsourcedoesntexist; Components: Full Normal
 
 ; Because of the disc layout, the Full installation files have to be declared
 ; separately to ensure everything is installed in their proper location.
