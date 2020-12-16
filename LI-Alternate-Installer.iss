@@ -1,5 +1,5 @@
-; LEGO Island Alternate Installer
-; Created 2012-2014 Triangle717
+﻿; LEGO Island Alternate Installer
+; Created 2012-2020 Triangle717
 ; <http://Triangle717.WordPress.com/>
 ; Contains source code from Grim Fandango Setup
 ; Copyright (c) 2007-2008 Bgbennyboy
@@ -63,8 +63,7 @@ Name: "English"; MessagesFile: "compiler:Default.isl"
 
 [Messages]
 English.BeveledLabel={#MyAppInstallerName}
-; WelcomeLabel2 is overridden because I'm unsure if every LEGO Island
-; disc says version 1.1.0.0 or just mine.
+; WelcomeLabel2 is overridden because of differing versions of LEGO Island.
 English.WelcomeLabel2=This will install [name] on your computer.%n%nIt is recommended that you close all other applications before continuing.
 ; DiskSpaceMBLabel is overridden because it reports an incorrect installation size.
 English.DiskSpaceMBLabel=
