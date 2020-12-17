@@ -27,3 +27,13 @@ jobs:
       with:
         path: 
           "bin/LEGO Island Alternate Installer 1.1.0.exe"
+
+    - name: Upload to Releases
+      shell: bash
+      if: github.event_name == 'push'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TRAVIS_REPO_SLUG: le717/Island-Alternate-Installer
+      run: |
+        curl -fLOSs --retry 2 --retry-delay 60 https://github.com/probonopd/uploadtool/raw/master/upload.sh
+        ./upload.sh "bin/LEGO Island Alternate Installer 1.1.0.exe"
