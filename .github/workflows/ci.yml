@@ -36,5 +36,5 @@ jobs:
         TRAVIS_REPO_SLUG: le717/Island-Alternate-Installer
         TRAVIS_COMMIT: ${{ github.sha }}
       run: |
-        curl -fLOSs --retry 2 --retry-delay 60 https://github.com/probonopd/uploadtool/raw/master/upload.sh
+        curl -fLOSs --retry 2 --retry-delay 60 https://raw.githubusercontent.com/itsmattkc/uploadtool/master/upload.sh
         ./upload.sh "bin/LEGO Island Alternate Installer 1.1.0.exe"
