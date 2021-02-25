@@ -5,7 +5,7 @@
 ; Copyright (c) 2007-2008 Bgbennyboy
 ; <http://quick.mixnmojo.com/>
 
-#define MyAppInstallerName "LEGO® Island Alternate Installer"
+#define MyAppInstallerName "LEGO Island Alternate Installer"
 #define MyAppInstallerVersion "1.2.0"
 #define MyAppName "LEGO Island"
 #define MyAppVersion "1.0.0"
