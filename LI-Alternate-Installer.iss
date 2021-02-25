@@ -5,16 +5,9 @@
 ; Copyright (c) 2007-2008 Bgbennyboy
 ; <http://quick.mixnmojo.com/>
 
-; If any version below the specified version is used for compiling, 
-; this error will be shown.
-#if VER < EncodeVer(5, 5, 2)
-  #error You must use Inno Setup 5.5.2 or newer to compile this script
-#endif
-
 #define MyAppInstallerName "LEGO® Island Alternate Installer"
 #define MyAppInstallerVersion "1.2.0"
-#define MyAppName "LEGO® Island"
-#define MyAppNameNoR "LEGO Island"
+#define MyAppName "LEGO Island"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "LEGO"
 #define MyAppExeName "LEGOISLE.EXE"
@@ -29,8 +22,8 @@ AppCopyright=© 1997 {#MyAppPublisher}
 LicenseFile=/resources/misc/license.txt
 DisableWelcomePage=no
 ; Start menu/screen and Desktop shortcuts
-DefaultDirName={pf}\{#MyAppNameNoR}
-DefaultGroupName={#MyAppNameNoR}
+DefaultDirName={pf}\{#MyAppName}
+DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
 ; Installer Graphics
 SetupIconFile=/resources/images/ISLE.ico
@@ -40,7 +33,7 @@ WizardImageStretch=True
 WizardImageBackColor=clBlack
 ; Location of the compiled Exe
 OutputDir=bin
-OutputBaseFilename={#MyAppNameNoR} Alternate Installer {#MyAppInstallerVersion}
+OutputBaseFilename={#MyAppName} Alternate Installer {#MyAppInstallerVersion}
 ; Uninstallation stuff
 UninstallFilesDir={app}
 UninstallDisplayIcon=ISLE.ico
