@@ -26,7 +26,7 @@ jobs:
       uses: actions/upload-artifact@v2.2.1
       with:
         path: 
-          "bin/LEGO Island Alternate Installer 1.1.0.exe"
+          "bin/LEGO Island Alternate Installer 1.2.0.exe"
 
     - name: Upload to Releases
       shell: bash
@@ -36,5 +36,5 @@ jobs:
         TRAVIS_REPO_SLUG: le717/Island-Alternate-Installer
         TRAVIS_COMMIT: ${{ github.sha }}
       run: |
-        curl -fLOSs --retry 2 --retry-delay 60 https://raw.githubusercontent.com/itsmattkc/uploadtool/master/upload.sh
-        ./upload.sh "bin/LEGO Island Alternate Installer 1.1.0.exe"
+        curl -fLOSs --retry 2 --retry-delay 60 https://raw.githubusercontent.com/probonopd/uploadtool/master/upload.sh
+        ./upload.sh "bin/LEGO Island Alternate Installer 1.2.0.exe"

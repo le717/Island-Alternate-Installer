@@ -1,5 +1,5 @@
 ﻿; LEGO Island Alternate Installer
-; Created 2012-2020 Triangle717
+; Created 2012-2021 Triangle717
 ; <http://Triangle717.WordPress.com/>
 ; Contains source code from Grim Fandango Setup
 ; Copyright (c) 2007-2008 Bgbennyboy
@@ -12,10 +12,10 @@
 #endif
 
 #define MyAppInstallerName "LEGO® Island Alternate Installer"
-#define MyAppInstallerVersion "1.1.0"
+#define MyAppInstallerVersion "1.2.0"
 #define MyAppName "LEGO® Island"
 #define MyAppNameNoR "LEGO Island"
-#define MyAppVersion "1.1.0.0"
+#define MyAppVersion "1.0.0"
 #define MyAppPublisher "LEGO"
 #define MyAppExeName "LEGOISLE.EXE"
 
@@ -26,15 +26,16 @@ AppVersion={#MyAppVersion}
 VersionInfoVersion={#MyAppInstallerVersion}
 AppPublisher={#MyAppPublisher}
 AppCopyright=© 1997 {#MyAppPublisher}
-LicenseFile=license.txt
+LicenseFile=/resources/misc/license.txt
+DisableWelcomePage=no
 ; Start menu/screen and Desktop shortcuts
 DefaultDirName={pf}\{#MyAppNameNoR}
 DefaultGroupName={#MyAppNameNoR}
 AllowNoIcons=yes
 ; Installer Graphics
-SetupIconFile=ISLE.ico
-WizardImageFile=Sidebar.bmp
-WizardSmallImageFile=Small-Image.bmp
+SetupIconFile=/resources/images/ISLE.ico
+WizardImageFile=/resources/images/Sidebar.bmp
+WizardSmallImageFile=/resources/images/Small-Image.bmp
 WizardImageStretch=True
 WizardImageBackColor=clBlack
 ; Location of the compiled Exe
@@ -79,9 +80,9 @@ Name: "Full"; Description: "Full Installation (Does Not Require CD)"; Types: Ful
 
 [Files]
 ; Manual, icon, license
-Source: "US Manual.pdf"; DestDir: "{app}"; Flags: ignoreversion skipifsourcedoesntexist
-Source: "ISLE.ico"; DestDir: "{app}"; Flags: ignoreversion
-Source: "license.txt"; DestDir: "{app}"; Flags: ignoreversion
+Source: "/resources/misc/US Manual.pdf"; DestDir: "{app}"; Flags: ignoreversion skipifsourcedoesntexist
+Source: "/resources/images/ISLE.ico"; DestDir: "{app}"; Flags: ignoreversion
+Source: "/resources/misc/license.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Standard files
 Source: "{code:GetSourceDrive}redist\directx\d3drm.dll"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
