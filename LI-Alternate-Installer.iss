@@ -104,7 +104,7 @@ Source: "{code:GetSourceDrive}DATA\disk\LEGO\data\*"; DestDir: "{app}\LEGO\data"
 ; Start menu/screen and Desktop icons
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\ISLE.ico";Comment: "Run {#MyAppName}"
 Name: "{group}\To Configure {#MyAppName}"; Filename: "{app}\CONFIG.EXE"; IconFilename: "{app}\ISLE.ico"; Comment: "Configure {#MyAppName}"
-Name: "{group}\Print Free Map of {#MyAppNameNoR}"; Filename: "{app}\Msrun.exe"; IconFilename: "{app}\ISLE.ico"; Comment: "Print A Free Map of {#MyAppNameNoR}"; Parameters: "LaunchRegistration"
+Name: "{group}\Print Free Map of {#MyAppName}"; Filename: "{app}\Msrun.exe"; IconFilename: "{app}\ISLE.ico"; Comment: "Print A Free Map of {#MyAppName}"; Parameters: "LaunchRegistration"
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"; IconFilename: "{app}\ISLE.ico";
 Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; IconFilename: "{app}\ISLE.ico"; Comment: "Run {#MyAppName}"; Tasks: desktopicon
 
