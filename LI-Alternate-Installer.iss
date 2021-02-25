@@ -85,7 +85,7 @@ Source: "/resources/images/ISLE.ico"; DestDir: "{app}"; Flags: ignoreversion
 Source: "/resources/misc/license.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Standard files
-Source: "{code:GetSourceDrive}redist\directx\d3drm.dll"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
+Source: "/resources/directx/d3drm.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}README.HLP"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}DATA\disk\*"; DestDir: "{app}"; Flags: external ignoreversion createallsubdirs recursesubdirs; Components: Normal
 Source: "{code:GetSourceDrive}MSREG\MSRUN.EXE"; DestName: "Msrun.exe"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
