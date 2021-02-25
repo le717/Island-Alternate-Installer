@@ -1,5 +1,5 @@
 //  LEGO Island Alternate Installer
-//  Created 2012-2014 Triangle717
+//  Created 2012-2021 Triangle717
 //  <http://triangle717.wordpress.com/>
 //  Contains source code from Grim Fandango Setup
 //  Copyright (c) 2007-2008 Bgbennyboy
