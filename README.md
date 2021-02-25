@@ -15,4 +15,4 @@ to pull the files off the disc, modified by Triangle717 to support ANSI and Unic
 
 # License #
 
-***LEGO Island Alternate Installer*, created 2012-2021 [Triangle717](http://Triangle717.WordPress.com).**
+***LEGO Island Alternate Installer*, created 2012-2021 by [Triangle717](http://Triangle717.WordPress.com)** and Ramen2X
