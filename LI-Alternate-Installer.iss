@@ -33,7 +33,7 @@ WizardImageStretch=True
 WizardImageBackColor=clBlack
 ; Location of the compiled Exe
 OutputDir=bin
-OutputBaseFilename={#MyAppName} Alternate Installer {#MyAppInstallerVersion}
+OutputBaseFilename={#MyAppName} Alternate Installer
 ; Uninstallation stuff
 UninstallFilesDir={app}
 UninstallDisplayIcon=ISLE.ico
