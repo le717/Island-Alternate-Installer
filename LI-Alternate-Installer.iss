@@ -24,6 +24,7 @@ AppPublisher={#MyAppPublisher}
 AppCopyright=© 1997 {#MyAppPublisher}
 LicenseFile=/resources/misc/license.txt
 DisableWelcomePage=no
+DisableDirPage=no
 ; Start menu/screen and Desktop shortcuts
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
