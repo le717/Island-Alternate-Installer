@@ -13,6 +13,7 @@
 #define MyAppExeName "LEGOISLE.EXE"
 
 [Setup]
+MinVersion=6.0
 AppID={#MyAppName}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
