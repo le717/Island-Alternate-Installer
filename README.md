@@ -5,6 +5,8 @@
 
 * Acts as a full replacement for the original 16-bit InstallShield installer
 * Improves game compatibility on modern versions of Windows by updating outdated APIs
+	+ Uses the latest released version of d3drm.dll from 2001 over the 1997 version that was bundled with the disc
+	+ Replaces the stock version of ddraw.dll with one from the [DDrawCompat wrapper project](https://github.com/narzoul/DDrawCompat "DDrawCompat")
 * Includes an optional no CD-ROM patch
 * Enables installation of the Japanese version, whose original installer was locked to Windows 9x
 
