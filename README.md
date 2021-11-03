@@ -1,12 +1,12 @@
 # LEGO Island Alternate Installer
-> An alternate installer for **LEGO Island**
+> An alternate installer for the 1997 video game **LEGO Island**
 
 ## Features
 
 * Acts as a full replacement for the original 16-bit InstallShield installer
-* Lets you install the game with a no CD-ROM patch
-* Improved compatibility on modern versions of Windows
-* Lets you install the Japanese version of the game without using the original Windows 95-locked installer
+* Improves game compatibility on modern versions of Windows by updating outdated APIs
+* Includes an optional no CD-ROM patch
+* Enables installation of the Japanese version, whose original installer was locked to Windows 9x
 
 
 ## Contributors
