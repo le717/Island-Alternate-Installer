@@ -4,15 +4,18 @@
 ; Contains source code from Grim Fandango Setup
 ; Copyright (c) 2007-2008 Bgbennyboy
 ; <http://quick.mixnmojo.com/>
+; Uses ddraw.dll from narzoul's "DDrawCompat" wrapper project
+; https://github.com/narzoul/DDrawCompat
 
 #define MyAppInstallerName "LEGO Island Alternate Installer"
-#define MyAppInstallerVersion "1.2.0"
+#define MyAppInstallerVersion "1.2.1"
 #define MyAppName "LEGO Island"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "LEGO"
 #define MyAppExeName "LEGOISLE.EXE"
 
 [Setup]
+MinVersion=6.0
 AppID={#MyAppName}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
@@ -21,6 +24,7 @@ AppPublisher={#MyAppPublisher}
 AppCopyright=© 1997 {#MyAppPublisher}
 LicenseFile=/resources/misc/license.txt
 DisableWelcomePage=no
+DisableDirPage=no
 ; Start menu/screen and Desktop shortcuts
 DefaultDirName={pf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
@@ -33,7 +37,7 @@ WizardImageStretch=True
 WizardImageBackColor=clBlack
 ; Location of the compiled Exe
 OutputDir=bin
-OutputBaseFilename={#MyAppName} Alternate Installer {#MyAppInstallerVersion}
+OutputBaseFilename={#MyAppName} Alternate Installer
 ; Uninstallation stuff
 UninstallFilesDir={app}
 UninstallDisplayIcon=ISLE.ico
@@ -79,6 +83,7 @@ Source: "/resources/misc/license.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Standard files
 Source: "/resources/directx/d3drm.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: Full Normal
+Source: "/resources/directx/ddraw.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}README.HLP"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
 Source: "{code:GetSourceDrive}DATA\disk\*"; DestDir: "{app}"; Flags: external ignoreversion createallsubdirs recursesubdirs; Components: Normal
 Source: "{code:GetSourceDrive}MSREG\MSRUN.EXE"; DestName: "Msrun.exe"; DestDir: "{app}"; Flags: external ignoreversion; Components: Full Normal
